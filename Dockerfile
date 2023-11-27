@@ -23,16 +23,18 @@ RUN apk add bash xz git patch
 
 WORKDIR /work
 
+ADD --link qemu src/qemu
+
 COPY command/base command/base
-COPY command/fetch command/fetch
-RUN /work/command/fetch
+#COPY command/fetch command/fetch
+#RUN /work/command/fetch
 
-COPY command/extract command/extract
-RUN /work/command/extract
+#COPY command/extract command/extract
+#RUN /work/command/extract
 
-COPY patch patch
-COPY command/patch command/patch
-RUN /work/command/patch
+#COPY patch patch
+#COPY command/patch command/patch
+#RUN /work/command/patch
 
 COPY command/configure command/configure
 RUN /work/command/configure
