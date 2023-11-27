@@ -41,3 +41,15 @@ docker image rm qemu
 ```
 docker system prune --force
 ```
+## usage
+
+run:
+
+```
+./build.sh
+```
+
+then check `artifact` folder to get compiled qemu.
+
+fill in `QEMU_REV` or `QEMU_GIT_COMMIT` in `build.sh` to compile different version of qemu.
+
