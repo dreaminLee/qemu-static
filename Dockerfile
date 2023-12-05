@@ -21,6 +21,10 @@ RUN apk add\
 # additional
 RUN apk add bash xz git patch
 
+RUN apk add pixman-dev pixman-static\
+            libbz2 bzip2-static\
+            ncurses-dev ncurses-static
+
 WORKDIR /work
 
 ADD --link qemu src/qemu
