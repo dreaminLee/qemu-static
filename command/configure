@@ -12,4 +12,5 @@ RUN "/work/src/${QEMU_SRC_BASENAME}/configure" \
     --enable-system \
     --enable-linux-user \
     --enable-strip \
+    --enable-slirp \
     --static

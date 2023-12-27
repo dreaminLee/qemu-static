@@ -17,6 +17,8 @@ RUN apk add\
  zlib-dev zlib-static\
  flex\
  bison
+ bison\
+ meson
 
 # additional
 RUN apk add bash xz git patch
@@ -40,6 +42,8 @@ COPY command/base command/base
 #COPY command/patch command/patch
 #RUN /work/command/patch
 
+COPY command/slirp command/slirp
+RUN /work/command/slirp
 COPY command/configure command/configure
 RUN /work/command/configure
 
